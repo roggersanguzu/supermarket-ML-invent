@@ -16,7 +16,6 @@ NUM_SKUS = 1000
 LOCATIONS = ['WH_A', 'WH_B', 'WH_C', 'WH_D']
 TRANSACTION_TYPES = ['sale', 'restock', 'damage', 'transfer']
 
-
 transaction_ids = np.arange(1, N+1)
 
 timestamps = [fake.date_time_between(start_date='-2y', end_date='now') for _ in range(N)]
@@ -64,3 +63,4 @@ df = df.sample(frac=1).reset_index(drop=True)
 
 df.to_csv('data/test_data.csv', index=False)
 print(" Master dataset created with 1,000,000 rows!")
+
